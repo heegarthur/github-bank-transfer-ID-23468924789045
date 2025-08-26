@@ -12,9 +12,7 @@ header {
 
 
 footer {
-  /* donkerblauw-grijs */
   color: #e2e8f0;
-  /* lichtgrijs */
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
@@ -35,7 +33,6 @@ footer {
 
 .footer-links a {
   color: #94a3b8;
-  /* grijsblauw */
   margin: 0 10px;
   text-decoration: none;
   transition: color 0.2s;
@@ -43,11 +40,9 @@ footer {
 
 .footer-links a:hover {
   color: #38bdf8;
-  /* lichtblauw highlight */
 }
 
 
-/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -65,7 +60,6 @@ body {
   padding: 20px;
 }
 
-/* ===== Containers ===== */
 #register-page,
 #login-page,
 #dashboard-page {
@@ -93,7 +87,6 @@ p {
   color: #d1d1d1;
 }
 
-/* ===== Labels & Inputs ===== */
 label {
   display: flex;
   flex-direction: column;
@@ -119,7 +112,6 @@ input:focus {
   border: 1px solid #00adb5;
 }
 
-/* ===== Buttons ===== */
 button {
   background: #00adb5;
   color: white;
@@ -141,7 +133,6 @@ button:active {
   transform: translateY(1px);
 }
 
-/* ===== Links ===== */
 a {
   color: #08d9d6;
   text-decoration: none;
@@ -152,7 +143,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Transaction History ===== */
 #transaction-history {
   list-style: none;
   max-height: 150px;
@@ -170,7 +160,6 @@ a:hover {
   border-left: 4px solid #00adb5;
 }
 
-/* ===== Animation ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -210,7 +199,6 @@ a:hover {
 #age-message{
   color: red;
 }
-/* From Uiverse.io by mrhyddenn */ 
 #loading{
   display: none;
 }
@@ -359,9 +347,10 @@ a:hover {
 
 @media (min-width: 768px) {
   .container {
-    flex-direction: row; /* op desktop naast elkaar */
+    flex-direction: row; 
   }
 }
 input{
   font-size: 16px;
 }
+
