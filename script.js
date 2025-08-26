@@ -1,5 +1,4 @@
 
-// Data storage
 let users = [];
 let currentUser = null;
 
@@ -39,7 +38,7 @@ function check_password(password) {
         return false;
     }
 
-    if (countSpecial < 3) { // ← jouw check stond verkeerd (was >2)
+    if (countSpecial < 3) { 
         document.getElementById("password-wrong").innerText = "Password must contain 3 or more special characters";
         return false;
     }
@@ -72,10 +71,10 @@ const toggleBtn = document.getElementById("togglePassword");
 
 toggleBtn.addEventListener("click", () => {
     if (passwordInput.type === "password") {
-        passwordInput.type = "text"; // toont het wachtwoord
-        toggleBtn.textContent = "hide password"; // icoon verandert
+        passwordInput.type = "text"; 
+        toggleBtn.textContent = "hide password"; 
     } else {
-        passwordInput.type = "password"; // verbergt het wachtwoord
+        passwordInput.type = "password"; 
         toggleBtn.textContent = "show password";
     }
 });
@@ -89,20 +88,16 @@ input.addEventListener("input", function (e) {
     for (let i = 0; i < val.length; i++) {
         let char = val[i];
 
-        // met kleine kans rare dingen doen
         let r = Math.random();
 
         if (r < 0.05) {
-            // 5% kans: sla de letter over (lijkt of hij niet getypt is)
+
             continue;
         } else if (r < 0.04) {
-            // 5% kans: verdubbel de letter
             newVal += char + char;
         } else if (r < 0.03 && i > 0) {
-            // 5% kans: wissel met vorige letter
             newVal = newVal.slice(0, -1) + char + newVal[newVal.length - 1];
         } else if (r < 0.04) {
-            // 5% kans: vervang door een buurladder (bv. naastliggende toets)
             const neighbours = {
                 "a": "s", "s": "a", "d": "f", "f": "d", "e": "r", "r": "e",
                 "n": "m", "m": "n", "o": "p", "p": "o"
@@ -132,7 +127,6 @@ function submit_captcha() {
 
 }
 
-// Registration function
 function register() {
     const username = document.getElementById('reg-username').value;
     const email = document.getElementById('reg-email').value;
@@ -147,7 +141,6 @@ function register() {
 
     let good = check_password(password)
     if (good == true) {
-        // Check if username exists
         if (users.find(u => u.username === username)) {
             alert('Username already exists.');
             return;
@@ -162,8 +155,6 @@ function register() {
 
 
 }
-
-// Login function
 function login() {
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
@@ -178,7 +169,6 @@ function login() {
     showDashboard();
 }
 
-// Show pages
 function showRegister() {
     document.getElementById('register-page').style.display = 'block';
     document.getElementById('login-page').style.display = 'none';
@@ -199,7 +189,6 @@ function showDashboard() {
     document.getElementById('user-name').textContent = currentUser.username;
     document.getElementById('user-balance').textContent = currentUser.balance.toFixed(2);
 
-    // Load transaction history
     const history = document.getElementById('transaction-history');
     history.innerHTML = '';
     currentUser.transactions.forEach(t => {
@@ -209,7 +198,6 @@ function showDashboard() {
     });
 }
 
-// Transfer function
 function transfer() {
     const recipientName = document.getElementById('transfer-recipient').value;
     const amount = parseFloat(document.getElementById('transfer-amount').value);
@@ -230,11 +218,9 @@ function transfer() {
         return;
     }
 
-    // Update balances
     currentUser.balance -= amount;
     recipient.balance += amount;
 
-    // Record transactions
     const date = new Date().toLocaleDateString('en-US');
     currentUser.transactions.push({ recipient: recipientName, amount, date });
     recipient.transactions.push({ recipient: currentUser.username, amount, date });
@@ -242,13 +228,12 @@ function transfer() {
     alert(`$${amount.toFixed(2)} sent to ${recipientName}!`);
     showDashboard();
 
-    // Clear fields
     document.getElementById('transfer-recipient').value = '';
     document.getElementById('transfer-amount').value = '';
 }
 
-// Logout
 function logout() {
     currentUser = null;
     showLogin();
+
 }
