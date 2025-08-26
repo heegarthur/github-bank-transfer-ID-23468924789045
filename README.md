@@ -60,6 +60,7 @@ This project is open to contributions.
 
 If you like the idea and want to support:  
 [Buy Me a Coffee](https://buymeacoffee.com/ivocreator)
+You can also suppor WITHOUT MONEY, just star this repository.
 
 ---
 
@@ -72,35 +73,3 @@ Feel free to adapt this project for **educational or entertainment purposes only
 
 *Thanks for visiting this repo!*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*would you give this repo a star??*
