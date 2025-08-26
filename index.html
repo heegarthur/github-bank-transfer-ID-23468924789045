@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>github bank | login</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Chango&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Registration Page -->
+  <div id="register-page">
+    <header>
+      <div id="github-title">github bank</div><img src="logo.png" aria-label="logo" id="logo">
+    </header>
+
+    <h1>Create Account</h1>
+    <label>Username: <input type="text" id="reg-username"></label><br>
+    <label>Email: <input type="email" id="reg-email"></label><br>
+    <label>Password: <input type="password" id="reg-password"></label><br>
+    <div id="password-wrong"></div>
+    <button type="button" id="togglePassword">show password</button>
+    <label>Age:<input type="number" id="age" max="100"></label><br>
+    <div id="age-message"></div>
+    <button onclick="register()">Register</button>
+    <div id="captcha">
+      <img src="captcha.png" aria-label="captcha"><br>
+      <input type="text" aria-label="captcha text" placeholder="type in the text you see in the image"
+        id="captcha-input"><br>
+      <button type="submit" onclick="submit_captcha()">submit</button>
+    </div>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    <div class="spinner center" id="loading">
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+      <div class="spinner-blade"></div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>© 2025 Github bank Inc. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Login Page -->
+  <div id="login-page" style="display:none;">
+    <h1>Login</h1>
+    <label>Username: <input type="text" id="login-username"></label><br>
+    <label>Password: <input type="password" id="login-password"></label><br>
+    <label>Age:<input type="number" id="reg-balance" max="100"></label><br>
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard-page" style="display:none;">
+    <h1>Dashboard</h1>
+    <p>Welcome, <span id="user-name"></span></p>
+    <p>Balance: $<span id="user-balance"></span></p>
+
+    <h2>Transfer Money</h2>
+    <label>Recipient Username: <input type="text" id="transfer-recipient"></label><br>
+    <label>Amount: <input type="number" id="transfer-amount"></label><br>
+    <button onclick="transfer()">Send Money</button>
+
+    <h2>Transaction History</h2>
+    <ul id="transaction-history"></ul>
+
+    <button onclick="logout()">Logout</button>
+
+  </div>
+
+  <script src="script.js">
+  </script>
+
+</body>
+
+</html>
