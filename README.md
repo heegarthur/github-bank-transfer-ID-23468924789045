@@ -8,7 +8,7 @@ It looks functional on the surface, but it will never actually let someone creat
 ## 🚀 Live Demo
 
 Check it out here:  
-[heegarthur.github.io/github-bank.transferID_23468924789045](https://heegarthur.github.io/github-bank.transferID_23468924789045/)
+[demo website](https://heegarthur.github.io/github-bank.transferID_23468924789045/)
 
 ---
 
@@ -46,7 +46,7 @@ This repository contains a static fake banking site, including:
 1. Clone or fork the repository.  
 2. Open `index.html` in your browser.  
 
-Or use the demo website: [heegarthur.github.io/github-bank.transferID_23468924789045](https://heegarthur.github.io/github-bank.transferID_23468924789045/)
+Or use the demo website: [demo website](https://heegarthur.github.io/github-bank.transferID_23468924789045/)
 
 ---
 
