@@ -355,3 +355,13 @@ a:hover {
   max-width: 7%;
   max-height: 5%;
 }
+
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* op desktop naast elkaar */
+  }
+}
+input{
+  font-size: 16px;
+}
